@@ -1,0 +1,110 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="0.6">
+            <TextView
+                android:id="@+id/textMusicName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                tools:text="Sample music name" />
+
+            <TextView
+                android:id="@+id/textArtistName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                tools:text="Sample artist name" />
+        </LinearLayout>
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.4">
+            <ImageView
+                android:id="@+id/image_remote"
+                android:layout_gravity="center"
+                android:layout_width="48dp"
+                android:layout_height="48dp"/>
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_weight="75"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_gravity="center|start"
+                android:id="@+id/buttonPrev"
+                android:layout_width="32dp"
+                android:layout_marginStart="32dp"
+                android:layout_height="32dp"
+                android:backgroundTint="@color/black"
+                android:background="@drawable/prev_button" />
+
+            <ImageView
+                android:id="@+id/buttonManage"
+                android:layout_gravity="center"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:rotation="180"
+                android:rotationY="180"
+                android:src="@drawable/pause2"
+                />
+
+            <ImageView
+                android:layout_gravity="center|end"
+                android:id="@+id/buttonNext"
+                android:layout_width="32dp"
+                android:layout_marginEnd="32dp"
+                android:layout_height="32dp"
+                android:backgroundTint="@color/black"
+                android:background="@drawable/next_button" />
+
+            <!--        <ImageView-->
+            <!--            android:id="@+id/buttonCancel"-->
+            <!--            android:layout_width="32dp"-->
+            <!--            android:layout_height="32dp"-->
+            <!--            android:layout_marginLeft="12dp"-->
+            <!--            android:rotation="45"-->
+            <!--            android:src="@drawable/plus" />-->
+        </FrameLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="25"
+            android:layout_height="0dp"/>
+    </LinearLayout>
+
+</LinearLayout>

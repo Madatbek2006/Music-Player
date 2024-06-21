@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/player_color1"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View
+        android:id="@+id/spase"
+        android:background="@color/player_color1"
+        android:elevation="3dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"/>
+    <FrameLayout
+        android:id="@+id/background1"
+        android:background="@color/player_color1"
+        android:elevation="3dp"
+        app:layout_constraintTop_toBottomOf="@id/spase"
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:text="Любимые"
+            android:layout_gravity="center|start"
+            android:layout_marginStart="16dp"
+            android:textSize="24dp"/>
+
+    </FrameLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        app:layout_constraintTop_toBottomOf="@id/background1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingBottom="128dp"
+        android:clipToPadding="false"/>
+    <ImageView
+        android:id="@+id/wave"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spase"
+        android:layout_width="match_parent"
+        app:layout_constraintDimensionRatio="1:1"
+        android:layout_marginHorizontal="64dp"
+        android:layout_marginBottom="64dp"
+        android:layout_height="0dp"
+        android:backgroundTint="@color/green"
+        android:background="@drawable/wave"/>
+    <TextView
+        android:id="@+id/txt"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/wave"
+        app:layout_constraintLeft_toLeftOf="@id/wave"
+        app:layout_constraintRight_toRightOf="@id/wave"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="У тебя нет любимых треков"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

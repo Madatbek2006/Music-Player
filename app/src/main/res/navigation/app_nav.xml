@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/aap_nav"
+    app:startDestination="@id/splashScreen">
+
+    <fragment
+        android:id="@+id/mainScreen"
+        android:name="com.example.mymusicservise.presenter.screen.main.MainScreen"
+        android:label="screen_main"
+        tools:layout="@layout/screen_main" >
+        <action
+            android:id="@+id/action_mainScreen_to_musicScreen"
+            app:destination="@id/musicScreen"
+         />
+        <argument
+            android:name="bool"
+            app:argType="boolean"
+            android:defaultValue="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/musicScreen"
+        android:name="com.example.mymusicservise.presenter.screen.music.MusicScreen"
+        android:label="MusicScreen"
+        tools:layout="@layout/screen_music"/>
+    <fragment
+        android:id="@+id/splashScreen"
+        android:name="com.example.mymusicservise.presenter.screen.splash.SplashScreen"
+        android:label="SplashScreen" >
+        <action
+            app:popUpTo="@id/splashScreen"
+            app:popUpToInclusive="true"
+            android:id="@+id/action_splashScreen_to_mainScreen"
+            app:destination="@id/mainScreen" />
+    </fragment>
+</navigation>
+
+

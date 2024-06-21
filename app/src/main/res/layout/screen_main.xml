@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/player_color1"
+    tools:context=".presenter.screen.main.MainScreen">
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        style="@style/NoShadov"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="#80000000"
+        app:itemIconTint="@color/color_bottom_navigation"
+        app:itemTextColor="@color/color_bottom_navigation"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/menu_main" />
+
+    <View
+        android:id="@+id/music"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_marginHorizontal="8dp"
+        android:background="@drawable/color_play_media"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigationView" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/image_con"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="6dp"
+        app:cardBackgroundColor="@color/black"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="@id/music"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toLeftOf="@id/music"
+        app:layout_constraintTop_toTopOf="@id/music">
+
+        <ImageView
+            android:id="@+id/music_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/voroni"
+            app:layout_constraintDimensionRatio="1:1" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/music_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="32dp"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:focusableInTouchMode="true"
+        android:focusable="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:maxLines="1"
+        android:text="Вороныdfvvvfsvsvsvsvsvs"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/executor_name"
+        app:layout_constraintLeft_toRightOf="@id/image_con"
+        app:layout_constraintRight_toLeftOf="@id/play"
+        app:layout_constraintTop_toTopOf="@id/image_con" />
+
+    <TextView
+        android:id="@+id/executor_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="32dp"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:focusableInTouchMode="true"
+        android:focusable="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:maxLines="1"
+        android:text="Исполнитель неизвестен"
+        android:textColor="@color/white"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@id/image_con"
+        app:layout_constraintLeft_toRightOf="@id/image_con"
+        app:layout_constraintRight_toLeftOf="@id/play"
+        app:layout_constraintTop_toBottomOf="@id/music_name" />
+
+    <ImageView
+        android:id="@+id/play"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/play"
+        app:layout_constraintBottom_toBottomOf="@id/music"
+        app:layout_constraintRight_toRightOf="@id/music"
+        app:layout_constraintTop_toTopOf="@id/music" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
